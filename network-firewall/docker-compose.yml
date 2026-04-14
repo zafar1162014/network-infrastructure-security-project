@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  router:
+    image: alpine:latest
+    command: ['sh', '-c', 'sleep infinity']
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+  host_a:
+    image: alpine:latest
+    command: ['sh', '-c', 'sleep infinity']
+  attacker:
+    image: alpine:latest
+    command: ['sh', '-c', 'sleep infinity']
